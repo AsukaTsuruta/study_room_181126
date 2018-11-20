@@ -1,0 +1,90 @@
+body {
+    background: #FFFFFF;
+    color: #646464;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+#form-table thead th {
+    background-color: #A4A4A4;
+    color: #FFFFFF;
+    border-bottom: none;
+}
+
+table tr {
+    color: #646464;
+    background-color: #FFFFFF;
+}
+#form-table {
+    width: 700px; 
+}
+
+.btn, .complete-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #43C2A6;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin: 10px;
+    transition: .4s;
+    border: none;
+}
+.btn:hover, .index:hover, .complete-btn:hover {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.index {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #A4A4A4;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin: 10px;
+    transition: .4s;
+    border: none;
+}
+
+.link-btn {
+    margin: 10px;
+}
+
+nav .title {
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+tbody tr th .label {
+    background: #FFFFFF;
+    color: #646464;
+}
+
+#delete-btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 10px;
+    transition: .4s;
+    background: #DEA800; 
+    border: none;
+}
+
+#delete-btn:hover {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+}

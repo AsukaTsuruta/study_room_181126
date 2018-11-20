@@ -1,1 +1,26 @@
 # アプリケーションサーバー構築用
+FROM php:7.2-fpm
+
+RUN apt-get update && apt-get install -y mysql-client \
+   && docker-php-ext-install pdo_mysql && \
+
+    #zip,unzip
+    apt-get install -y zip unzip && \
+
+    #vim
+    apt-get install -y vim && \
+
+    #composer
+    curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer && \
+
+    #user追加
+    useradd -m -s /bin/bash -u 10000 test_user && \
+
+    #www.conf修正
+    sed -i 's/user\ \=\ www-data/user\ \=\ test_user/g' /usr/local/etc/php-fpm.d/www.conf && \
+    sed -i 's/group\ \=\ www-data/group\ \=\ test_user/g' /usr/local/etc/php-fpm.d/www.conf && \
+
+    #pingを使う
+    apt-get update && apt-get install -y iputils-ping
+WORKDIR /var/www
