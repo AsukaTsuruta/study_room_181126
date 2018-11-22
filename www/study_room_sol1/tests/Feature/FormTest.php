@@ -10,7 +10,7 @@ use App\Form;
 class FormTest extends TestCase
 {
 
-    use RefreshDatabase;
+    //use RefreshDatabase;
 
     public function testForm()
     {
